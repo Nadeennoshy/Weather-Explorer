@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_explorer/widgets/weather_forecast.dart';
 
 class WeatherHome extends StatelessWidget {
   const WeatherHome({super.key});
@@ -13,9 +14,9 @@ class WeatherHome extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Stack(
+          child: const Stack(
             children: [
-              const Positioned(
+               Positioned(
                 top: 150,
                 left: 150,
                 child: Column(
@@ -30,6 +31,7 @@ class WeatherHome extends StatelessWidget {
                         Text('L:18',style: TextStyle(color: Colors.white),),
                       ],
                     ),
+                  
 
                   ],
                 ),
@@ -37,7 +39,8 @@ class WeatherHome extends StatelessWidget {
               Positioned(
                 bottom: 0,
                 right: 0,
-                child: Image.asset('assets/images/house.png'),
+                // child: Image.asset('assets/images/house.png'),
+                child: WeatherForecast(),
               ),
               // Add your other widgets here
             ],
